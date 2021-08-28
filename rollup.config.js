@@ -1,5 +1,6 @@
 import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
+import less from 'rollup-plugin-less';
 
 
 export default {
@@ -11,6 +12,9 @@ export default {
   plugins: [
     babel({
       exclude: 'node_modules/**'
+    }),
+    less({
+      output:'./lib/bundle.css'
     }),
     uglify()
   ],

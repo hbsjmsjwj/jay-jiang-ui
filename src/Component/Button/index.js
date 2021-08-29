@@ -25,7 +25,11 @@ const Component = function (props) {
     const classNames = classnames(classes, props.className);
 
     return (
-        <button className={classNames}>{props.children}</button>
+        <button className={classNames}>
+            <span>
+                {props.children}
+            </span>
+        </button>
     )
 }
 Component.propTypes = {

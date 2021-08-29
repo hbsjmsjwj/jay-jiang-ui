@@ -1,8 +1,6 @@
 import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
 import less from 'rollup-plugin-less';
-
-
 export default {
   input: 'src/index.js',
   output: {
@@ -13,9 +11,11 @@ export default {
     babel({
       exclude: 'node_modules/**'
     }),
-    less({
-      output:'./lib/bundle.css'
-    }),
+    less(
+      {
+        output: './lib/jayui.css'
+      },
+    ),
     uglify()
   ],
   external: ['react', '@emotion/core']

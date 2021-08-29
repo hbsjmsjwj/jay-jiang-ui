@@ -9,7 +9,9 @@
 
 - `import { Button } from 'jay-jiang-ui'` 引入组件示例,在react项目中使用
 
-- `@import ‘～jay-jiang-ui/lib/jayui.css’`不支持less和sass｜scss
+- `@import ‘～jay-jiang-ui/lib/jayui.less’` 引入less文件
+
+- `@import ‘～jay-jiang-ui/lib/jayui.css’` 引入css文件
 
 ### Email
 - `756774388@qq.com`

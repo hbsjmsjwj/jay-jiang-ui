@@ -23,9 +23,13 @@ const Component = function (props) {
     }
 
     const classNames = classnames(classes, props.className);
-
     return (
-        <button className={classNames}>
+        <button 
+        className={classNames} 
+        disabled={props.disabled} 
+        onClick={props.onClick}
+        style={props.style}
+        >
             <span>
                 {props.children}
             </span>
@@ -34,11 +38,21 @@ const Component = function (props) {
 }
 Component.propTypes = {
     className: PropTypes.string,
-    type: PropTypes.string
+    type: PropTypes.string,
+    icon:PropTypes.oneOfType([
+        PropTypes.node, PropTypes.string
+    ]),
+    disabled:PropTypes.bool,
+    onClick: PropTypes.func,
+    style: PropTypes.object,
 }
 Component.defaultProps = {
     className: '',
-    type: 'primary'
+    type: 'primary',
+    icon:'',
+    disabled: false,
+    onClick:()=>{},
+    style: {}
 }
 export default Component
 //https://gitee.com/joeslee/ant-design
